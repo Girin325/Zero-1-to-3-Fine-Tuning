@@ -632,7 +632,7 @@ if __name__ == "__main__":
             ckpt = os.path.join(logdir, "checkpoints", "last.ckpt")
 
         opt.resume_from_checkpoint = ckpt
-        base_configs = sorted(glob.glob(os.path.join(logdir, "configs/*.yaml")))
+        base_configs = sorted(glob.glob(os.path.join(logdir, "configs/*.yaml")))        ### sh-objaverse~~ .yaml 파일 불러옴
         opt.base = base_configs + opt.base
         _tmp = logdir.split("/")
         nowname = _tmp[-1]
